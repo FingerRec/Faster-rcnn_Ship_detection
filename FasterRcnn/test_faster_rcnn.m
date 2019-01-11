@@ -4,7 +4,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Load Detector And Test Data
-data = load('ship_detection.mat');
+data = load('Checkpoints/ship_detection.mat');
 detector = data.data.detector;
 testData = data.data.testData
 
@@ -63,6 +63,4 @@ xlabel('Recall')
 ylabel('Precision')
 grid on
 title(sprintf('Average Precision = %.2f', ap))
-
-
 

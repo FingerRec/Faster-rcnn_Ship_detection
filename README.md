@@ -11,8 +11,7 @@
 > A cuda-avilable gpu is auto used in matlab. Make sure you have a GPU, cpu train is very cery slow.
 
 ## Screenshots
-![](https://uc6ebc35cff4e21bee75632e70da.previews.dropboxusercontent.com/p/thumb/AASJuayOLOkpIHDcGVWHQIs6Y2X7F0piK8B0UBWmcAw9JxOESvoHVrxefvZmM4_2t-oZovIJRA9SCJMLTVhxmuqwUg0wrLnT_sTRjkJI6SFi1GeDdIykkqSlSzxVoiTAACGH-OwuPp2STWyVpEbTYqa3DlxB4TWJj3O3i0_oDk1gYOW3MDWj7mVxF9AiZEnS5zJjksvF6p2LnmeVtSVCn7FBzDZCAtGAidpPneVH1HI2Cy5TcTLyx5Vr9o0Vn-F5FNHNhUxs_kdJN4Q8uTSUO9DJxF4meThlGaySS7qTggOFd3gztROjVnNOzHaKEwxaHP8WN7TTWCe407X3pv68y3ZjqTUjNWauXJjGkDd6upfhL8b0ZsHpYXc-rnLDgGk5kbTkLVj_HWuCJJkeKxsnXxrN9fMFdLXVrN5yqO97Y94S5QXpO7SHn_UWriPJRV25j-fd1Z6YT7o1GVOWdvUkPYM_/p.jpeg?size=1280x960&size_mode=3)
-
+![image](https://github.com/FingerRec/Faster-rcnn_Ship_detection/raw/master/Output/software_capture1.bmp)
 ![image](https://github.com/FingerRec/Faster-rcnn_Ship_detection/raw/master/Output/software_capture2.bmp)
 ![image](https://github.com/FingerRec/Faster-rcnn_Ship_detection/raw/master/Output/wavelet_filter_compress.bmp)
 ![image](https://github.com/FingerRec/Faster-rcnn_Ship_detection/raw/master/Output/wiener_filter_example_1.bmp)

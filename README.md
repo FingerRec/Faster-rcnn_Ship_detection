@@ -11,7 +11,7 @@
 > A cuda-avilable gpu is auto used in matlab. Make sure you have a GPU, cpu train is very cery slow.
 
 ## Screenshots
-![image](https://github.com/FingerRec/Faster-rcnn_Ship_detection/raw/master/Output/software_capture1.bmp)
+![image](https://github.com/FingerRec/Faster-rcnn_Ship_detection/raw/master/Output/software_capture.bmp)
 ![image](https://github.com/FingerRec/Faster-rcnn_Ship_detection/raw/master/Output/software_capture2.bmp)
 ![image](https://github.com/FingerRec/Faster-rcnn_Ship_detection/raw/master/Output/wavelet_filter_compress.bmp)
 ![image](https://github.com/FingerRec/Faster-rcnn_Ship_detection/raw/master/Output/wiener_filter_example_1.bmp)

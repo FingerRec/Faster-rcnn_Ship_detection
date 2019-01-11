@@ -7,14 +7,14 @@ baseBone = ['resnet50', 'alexnet', 'vgg16', 'vgg19', 'resnet50',...
 params.csvFilePath = '/home/awiny/Datasets/ship_detection/train_ship_segmentations_v2.csv';
 params.datasetPath = '/home/awiny/Datasets/ship_detection/train_v2/';
 params.newPath = '/home/awiny/Dropbox/Code/MatlabCode/DSP_Project/BigShips/';
-params.allImgNum = 5000;
-params.shipThresh = 80; %100 recommand
+params.allImgNum = 100000;
+params.shipThresh = 60; %100 recommand
 params.trainImgSize = [228, 228];
 params.originImgSize = [768, 768];
 params.cnnInputSize = [32, 32];
 params.batchSize = 1;
-params.initialLR = 1e-2;
-params.maxEpoches = 40;
+params.initialLR = 1e-3;
+params.maxEpoches = 30;
 params.VerboseFrequency = 200;
 params.numClasses = 1; %Only Ship
 params.baseNet = resnet50; %choose one from baseBone or contrust CNN by cnn_construct.m
@@ -30,7 +30,7 @@ fprintf("All img num is: %d \n",ship_count)
 %bbox = rle_to_bbox
 
 %% Plot Data
-dataMat = data
+dataMat = data;
 vehicleDataset = dataMat.vehicleTrainingData;
 for i = 100:100
     
@@ -53,9 +53,9 @@ end
 idx = floor(0.7 * height(vehicleDataset));
 trainingData = vehicleDataset(1:idx,:);
 testData = vehicleDataset(idx:end,:);
-data.trainingData = trainingData
-data.testData = testData
-data.idx = idx
+data.trainingData = trainingData;
+data.testData = testData;
+data.idx = idx;
 fprintf("Train img num is: %d \n",idx)
 fprintf("Test img num is: %d \n",height(vehicleDataset) - idx)
 %% Load data
@@ -64,17 +64,27 @@ fprintf("Test img num is: %d \n",height(vehicleDataset) - idx)
 
 %% Define CNN
 cnn = rcnn_based_network(params.baseNet, params.numClasses)
-%cnn = cnn_construct(cnnInputSize, trainingData)
+%cnn = cnn_construct(params.cnnInputSize, trainingData)
 
 %% Load Training Options
 [options] = training_options(params.batchSize, params.initialLR,...
-    params.maxEpoches, params.VerboseFrequency)
+    params.maxEpoches, params.VerboseFrequency);
 
 
 %% Train Detector
 % Train detector. Training will take a few minutes.
-detector = trainFasterRCNNObjectDetector(trainingData, cnn, options)
-data.detector = detector
+% Cnn based
+detector = trainFasterRCNNObjectDetector(trainingData, cnn, options, ...
+    'NegativeOverlapRange',[0 0.3], ...
+    'PositiveOverlapRange',[0.6 1], ...
+    'NumRegionsToSample',[256 128 256 128], ...
+    'BoxPyramidScale', 1.2);
+% Resnet50 based
+%detector = trainFasterRCNNObjectDetector(trainingData, cnn, options, ...
+%    'NegativeOverlapRange',[0 0.3], ...
+%    'PositiveOverlapRange',[0.6 1], ...
+%    'NumRegionsToSample',[256 128 256 128]);
+data.detector = detector;
 
 %% Save Result
 save(fullfile('.','CheckPoints/ship_detection.mat'), 'data');

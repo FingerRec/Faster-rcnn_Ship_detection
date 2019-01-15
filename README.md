@@ -13,7 +13,7 @@
 ## Screenshots
 
 ![image](https://github.com/FingerRec/Faster-rcnn_Ship_detection/raw/master/Output/software_capture2.bmp)
-![image](https://github.com/FingerRec/Faster-rcnn_Ship_detection/raw/master/Output/AveragePrecision_example2.png)
+![image](https://github.com/FingerRec/Faster-rcnn_Ship_detection/raw/master/Output/AveragePrecision_example2.bmp)
 ![image](https://github.com/FingerRec/Faster-rcnn_Ship_detection/raw/master/Output/example_2.bmp)
 ![image](https://github.com/FingerRec/Faster-rcnn_Ship_detection/raw/master/Output/wavelet_filter_compress.bmp)
 ![image](https://github.com/FingerRec/Faster-rcnn_Ship_detection/raw/master/Output/wiener_filter_example_1.bmp)

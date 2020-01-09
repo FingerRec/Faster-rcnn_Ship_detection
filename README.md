@@ -8,7 +8,7 @@
 [![](https://img.shields.io/badge/Nvidia-CUDA--GPU-blue.svg)][cuda]
 
 > Install these toolboxs from MatlabR2018b app manager directly.  
-> A cuda-avilable gpu is auto used in matlab. Make sure you have a GPU, cpu train is very cery slow.
+> A cuda-avilable gpu is auto used in matlab. Make sure you have a GPU, cpu train is very slow.
 
 ## Screenshots
 
